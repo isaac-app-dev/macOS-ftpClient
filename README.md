@@ -44,6 +44,12 @@ git clone https://github.com/isaac-app-dev/macOS-ftpClient.git .
 
 ```zsh
 
+mkdir bin
+
+```
+
+```zsh
+
 swiftc src/main.swift -o bin/ftp
 
 ```
