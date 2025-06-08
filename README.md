@@ -24,9 +24,11 @@ You can build the FTP client directly using the Swift compiler.
 
 ```zsh
 
-git clone https://github.com/your-username/swift-ftp-client.git
+mkdir ftp
 
-cd swift-ftp-client
+cd ftp
+
+git clone https://github.com/isaac-app-dev/macOS-ftpClient.git .
 
 ```
 
@@ -106,6 +108,6 @@ MIT License
 
 Developed by Isaac Zapata
 
-Your GitHub Profile or Website
+[Github Profile](https://github.com/isaac-app-dev)
 
 ---
