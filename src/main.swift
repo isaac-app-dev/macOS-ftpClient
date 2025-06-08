@@ -276,7 +276,7 @@ func parseArguments() -> (String, UInt32) {
     }
 
     guard let ipAddress = ip else {
-        print("Usage: ftpclient -i <ip_address> [-p <port>]")
+        print("Usage: ftp -i <ip_address> [-p <port>]")
         exit(1)
     }
 
