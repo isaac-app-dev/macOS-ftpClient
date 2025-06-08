@@ -26,7 +26,15 @@ You can build the FTP client directly using the Swift compiler.
 
 mkdir ftp
 
+```
+
+```zsh
+
 cd ftp
+
+```
+
+```zsh
 
 git clone https://github.com/isaac-app-dev/macOS-ftpClient.git .
 
@@ -58,9 +66,13 @@ sudo ln -s bin/ftp /usr/local/bin/
 
 -i, IP Address, is the only required option for this client. If FTP is running on a port other than the default, 21, e.g. through port forwarding, you may override the default port number with the -p, port flag.
 
-```bash
+```zsh
 
 ftp -i 10.10.10.10
+
+```
+
+```zsh
 
 ftp -i 127.0.0.1 -p 1337
 
