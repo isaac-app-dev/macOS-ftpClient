@@ -92,7 +92,7 @@ Once connected, you’ll enter an interactive ftp> prompt
 
 Command List:
 
-| Left Align | Center Align |
+| Command | Action |
 |:-----------|:------------:|
 | get download.txt    |   Download a File    |
 | put upload.txt    |   Upload a File    |
@@ -104,14 +104,12 @@ Command List:
 
 ### Examples
 
-```
-
+```zsh
 ftp> get sample.txt
 ftp> put upload.txt
 ftp> cd testfolder
 ftp> dir
 ftp> quit
-
 ```
 
 
