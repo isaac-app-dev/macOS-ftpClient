@@ -61,8 +61,8 @@ This will generate an executable named 'ftp' in the bin folder of this git repos
 To avoid adding this repo to your PATH, it is best practice to create a symlink for the ftp executable in your /usr/local/bin directory. You will need elevated privileges as you are updating a system folder.
 
 ```zsh
-
-sudo ln -s bin/ftp /usr/local/bin/
+# Ensure to use the full/absolute path to the ftp executable
+sudo ln -s '<full path to ftp executable>'/ftp /usr/local/bin/
 
 ```
 
