@@ -92,19 +92,28 @@ Once connected, you’ll enter an interactive ftp> prompt.
 
 Command List:
 
-get <filename>	    Download a file
-put <filename>	    Upload a file
+get download.txt	Download a file
+
+put upload.txt	    Upload a file
+
 dir or list	        List directory contents
-cd <directory>      Change remote directory
-pwd                 Show current remote directory
+
+cd /new/dir/path    Change remote directory
+
+pwd                 Print working directory
+
 quit	            Exit the client
 
 Examples:
 
 ftp> get sample.txt
+
 ftp> put upload.txt
+
 ftp> cd testfolder
+
 ftp> dir
+
 ftp> quit
 
 
