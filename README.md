@@ -88,33 +88,31 @@ ftp -i 127.0.0.1 -p 1337
 
 ## 💻 FTP Prompt Commands
 
-Once connected, you’ll enter an interactive ftp> prompt.
+Once connected, you’ll enter an interactive ftp> prompt
 
 Command List:
 
-get download.txt	Download a file
+| Left Align | Center Align |
+|:-----------|:------------:|
+| get download.txt    |   Download a File    |
+| put upload.txt    |   Upload a File    |
+| dir   |   List directory contents   |
+| cd /new/dir/path   |   Change Working Directory   |
+| pwd   |   Print Working Directory    |
+| quit   |   Exit Session and Close Client   |
 
-put upload.txt	    Upload a file
 
-dir or list	        List directory contents
+### Examples
 
-cd /new/dir/path    Change remote directory
-
-pwd                 Print working directory
-
-quit	            Exit the client
-
-Examples:
+```
 
 ftp> get sample.txt
-
 ftp> put upload.txt
-
 ftp> cd testfolder
-
 ftp> dir
-
 ftp> quit
+
+```
 
 
 ---
