@@ -122,20 +122,26 @@ class FTPClient {
 
         let filePath = FileManager.default.currentDirectoryPath + "/" + safeFileName
         FileManager.default.createFile(atPath: filePath, contents: nil, attributes: nil)
-        let fileHandle = FileHandle(forWritingAtPath: filePath)
+        
+        guard let fileHandle = FileHandle(forWritingAtPath: filePath) else {
+            print("Failed to open local file for writing")
+            return
+        }
+        fileHandle.truncateFile(atOffset: 0)
 
         var buffer = [UInt8](repeating: 0, count: 1024)
-        while dataInputStream.hasBytesAvailable {
+        
+        while true {
             let bytesRead = dataInputStream.read(&buffer, maxLength: buffer.count)
             if bytesRead > 0 {
                 let data = Data(buffer[0..<bytesRead])
-                fileHandle?.write(data)
+                fileHandle.write(data)
             } else {
-                break
+                break //EOF or stream closed to ensure we capture the final EOF
             }
         }
 
-        fileHandle?.closeFile()
+        fileHandle.closeFile()
         dataInputStream.close()
 
         if let response = readResponse() {
